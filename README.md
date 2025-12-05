@@ -11,7 +11,6 @@ Search across Battle for Dream Island episode transcripts with filters by keywor
 - Node.js 18+
 - Python 3 (for exporters/thumbnails)
 - npm/yarn
-- Optional: MongoDB URI in `.env` (only needed to re-export data)
 
 ## Setup
 1) Install deps (run once):
@@ -38,3 +37,4 @@ MONGODB_URI=mongodb+srv://...
 
 ## Attribution
 Project inspired by SpongeSearch by CurtisTRY; adapted for BFDI transcripts.
+https://github.com/curtistry/sponge-search/tree/main
