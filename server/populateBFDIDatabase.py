@@ -1,14 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-BFDI Search - Database Population Script v8 (SMART PARSER)
-
-MAJOR IMPROVEMENTS:
-- Parses <b> tags for character names (BFDI wiki standard)
-- Expanded character list (80+ characters)
-- Filters episode titles, section headers, creator commentary
-- Stricter dialogue validation
-- Better speaker tracking
-"""
 
 import cloudscraper
 import os
