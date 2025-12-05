@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import axios from "axios";
 import Pane from '../components/Pane'
 import ResultCard from '../components/ResultCard';
 
@@ -73,6 +72,11 @@ function Search() {
   const [season, setSeason] = useState('');
   const [match, setMatch] = useState('');
   const [results, setResults] = useState([]);
+  const [dialogue, setDialogue] = useState([]);
+  const [thumbIndex, setThumbIndex] = useState({});
+  const [thumbSlugIndex, setThumbSlugIndex] = useState({});
+  const [thumbReady, setThumbReady] = useState(false);
+  const [dataError, setDataError] = useState('');
 
   const [load, setLoad] = useState(false);
   const [show, setShow] = useState(false);
@@ -86,37 +90,97 @@ function Search() {
     alert(`Spongebob fact: ${hint}\n(design still in progress)`);
   };*/
 
-  const getResults = async () => {
-    try {
-      setLoad(true);
-      // Specify search parameters
-      let params = {};
-      if (keywords) {
-        params.keywords = keywords;
-      }
-      if (character) {
-        params.character = character;
-      }
-      if (season) {
-        params.season = season;
-      }
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const [dialogueRes, thumbRes] = await Promise.all([
+          fetch('/dialogue_export.json'),
+          fetch('/thumbnails/index.json')
+        ]);
 
-      const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
-      const response = await axios.get(`${backendUrl}/dialogue/search`, {
-        params: params,
-      });
+        if (!dialogueRes.ok) throw new Error(`dialogue_export.json HTTP ${dialogueRes.status}`);
+        if (!thumbRes.ok) throw new Error(`thumbnails/index.json HTTP ${thumbRes.status}`);
 
-      console.log("# of results:", response.data.length);
-      //console.log("results:",response.data);
-      
-      setResults(response.data);
-      setMatch(keywords);
-      setLoad(false);
-    } catch (e) {
-      console.error(e);
-      setMatch('');
-      setLoad(false);
+        const data = await dialogueRes.json();
+        const thumbs = await thumbRes.json();
+        setDialogue(Array.isArray(data) ? data : []);
+        const safeThumbs = thumbs && typeof thumbs === 'object' ? thumbs : {};
+        setThumbIndex(safeThumbs);
+
+        // Build a slug map for fuzzy matching (lowercase, non-alnum -> underscore).
+        const slugMap = {};
+        const slugify = (str) =>
+          (str || '')
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '_')
+            .replace(/^_+|_+$/g, '');
+        for (const [k, v] of Object.entries(safeThumbs)) {
+          if (v && v.filename) {
+            slugMap[slugify(k)] = v.filename;
+          }
+        }
+        setThumbSlugIndex(slugMap);
+        setThumbReady(true);
+      } catch (err) {
+        console.error('Failed to load dialogue_export.json', err);
+        setDataError('Failed to load dialogue data.');
+      }
+    };
+    load();
+  }, []);
+
+  const findThumb = (title) => {
+    const key = (title || '').trim();
+    const direct = thumbIndex[key];
+    if (direct && direct.filename) return direct.filename;
+    const lower = key.toLowerCase();
+    for (const [k, v] of Object.entries(thumbIndex)) {
+      if (k.toLowerCase() === lower && v && v.filename) {
+        return v.filename;
+      }
     }
+    const slugify = (str) =>
+      (str || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_')
+        .replace(/^_+|_+$/g, '');
+    const slug = slugify(key);
+    if (thumbSlugIndex[slug]) return thumbSlugIndex[slug];
+    return null;
+  };
+
+  // If thumbnails load after an initial search, refresh results to attach thumbnails.
+  useEffect(() => {
+    if (thumbReady && keywords.length >= 2 && dialogue.length) {
+      getResults();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thumbReady]);
+
+  const getResults = () => {
+    setLoad(true);
+    const filtered = dialogue.filter((d) => {
+      if (season && String(d.season) !== String(season)) return false;
+      if (character) {
+        const hay = (d.character || '').toLowerCase();
+        if (!hay.includes(character.toLowerCase())) return false;
+      }
+      if (keywords) {
+        const hay = (d.dialogue || '').toLowerCase();
+        if (!hay.includes(keywords.toLowerCase())) return false;
+      }
+      return true;
+    });
+    const withThumb = filtered.map((d) => {
+      const filename = findThumb(d.episode_title);
+      return {
+        ...d,
+        thumbnail: filename ? `/thumbnails/${filename}` : `/thumbnails/placeholder.jpg`,
+      };
+    });
+    setResults(withThumb.slice(0, 150));
+    setMatch(keywords);
+    setLoad(false);
   }
 
   // Method to handle search/filter submissions.
@@ -127,6 +191,11 @@ function Search() {
       console.error("The keyword should be at least 2 characters.");
       setMatch('');
       setResults([]);
+      return;
+    }
+    if (dataError || !dialogue.length) {
+      setModalMsg(dataError || 'Dialogue data not loaded yet. Please try again in a moment.');
+      setShow(true);
       return;
     }
     // Send search and filter data to the Backend API. 

@@ -20,12 +20,11 @@ function ResultCard(props) {
         window.open(props.result.transcript, '_blank');
     }
 
-    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
     const imageUrl = props.result.thumbnail
-        ? `${backendUrl}${props.result.thumbnail}`
+        ? props.result.thumbnail
         : props.result.image
           ? props.result.image
-          : `${backendUrl}/thumbnails/placeholder.jpg`;
+          : `/thumbnails/placeholder.jpg`;
 
     return (
         <div className="resultCard" key={props.result._id}>
@@ -48,7 +47,7 @@ function ResultCard(props) {
                   onError={(e) => {
                     if (e.target.dataset.fallback !== "1") {
                       e.target.dataset.fallback = "1";
-                      e.target.src = `${backendUrl}/thumbnails/placeholder.jpg`;
+                      e.target.src = `/thumbnails/placeholder.jpg`;
                     }
                   }}
                   onClick={redirect}
