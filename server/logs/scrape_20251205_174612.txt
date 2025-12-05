@@ -1,0 +1,415 @@
+============================================================
+BFDI Search - Database Population Script v8 (SMART PARSER)
+============================================================
+Features:
+  - Bold tag parsing for character names
+  - 80+ known characters
+  - Filters garbage/creator commentary
+  - Strict dialogue validation
+============================================================
+✓ Connected to MongoDB
+
+Preserving existing data (CLEAR_EXISTING=False)
+Will skip episodes already in DB (47 found)
+
+Scraping 103 episodes...
+
+    SKIP (already scraped): Take the Plunge: Part 1
+    SKIP (already scraped): Take the Plunge: Part 2
+
+[3] Scraping: Barriers and Pitfalls
+    URL: https://battlefordreamisland.fandom.com/wiki/Barriers_and_Pitfalls/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Are You Smarter Than a Snowball?
+    SKIP (already scraped): Sweet Tooth
+    SKIP (already scraped): Bridge Crossing
+    SKIP (already scraped): Power of Three
+
+[8] Scraping: Puzzling Mysteries
+    URL: https://battlefordreamisland.fandom.com/wiki/Puzzling_Mysteries/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Cycle of Life
+
+[10] Scraping: Insectophobe's Nightmare
+    URL: https://battlefordreamisland.fandom.com/wiki/Insectophobe's_Nightmare/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Crybaby!
+    SKIP (already scraped): Lofty
+    SKIP (already scraped): A Leg Up in the Race
+
+[14] Scraping: Don't Lose Your Marbles
+    URL: https://battlefordreamisland.fandom.com/wiki/Don't_Lose_Your_Marbles/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Half a Loaf Is Better Than None
+
+[16] Scraping: Vomitaco
+    URL: https://battlefordreamisland.fandom.com/wiki/Vomitaco/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[17] Scraping: Bowling, Now with Explosions!
+    URL: https://battlefordreamisland.fandom.com/wiki/Bowling,_Now_with_Explosions!/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): The Reveal
+
+[19] Scraping: Reveal Novum
+    URL: https://battlefordreamisland.fandom.com/wiki/Reveal_Novum/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Rescission
+    SKIP (already scraped): Gardening Hero
+    SKIP (already scraped): The Glistening
+
+[23] Scraping: Don't Pierce My Flesh
+    URL: https://battlefordreamisland.fandom.com/wiki/Don't_Pierce_My_Flesh/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Hurtful!
+
+[25] Scraping: Insectophobe's Nightmare 2
+    URL: https://battlefordreamisland.fandom.com/wiki/Insectophobe's_Nightmare_2/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Return of the Hang Glider
+    SKIP (already scraped): Yeah, Who? I Wanna Know
+
+[28] Scraping: Get Digging
+    URL: https://battlefordreamisland.fandom.com/wiki/Get_Digging/Transcript
+    SUCCESS: 137 dialogue lines inserted
+
+[29] Scraping: Insectophobe's Nightmare 3
+    URL: https://battlefordreamisland.fandom.com/wiki/Insectophobe's_Nightmare_3/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[30] Scraping: Zeeky Boogy Doog
+    URL: https://battlefordreamisland.fandom.com/wiki/Zeeky_Boogy_Doog/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Get in the Van
+
+[33] Scraping: No More Snow!
+    URL: https://battlefordreamisland.fandom.com/wiki/No_More_Snow!/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[34] Scraping: It's a Monster
+    URL: https://battlefordreamisland.fandom.com/wiki/It's_a_Monster/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): The Long-lost Yoyle City
+    SKIP (already scraped): Well Rested
+
+[37] Scraping: Intruder Alert
+    URL: https://battlefordreamisland.fandom.com/wiki/Intruder_Alert/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[38] Scraping: Meaty
+    URL: https://battlefordreamisland.fandom.com/wiki/Meaty/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Catch These Hands
+
+[40] Scraping: Taste the Sweetness
+    URL: https://battlefordreamisland.fandom.com/wiki/Taste_the_Sweetness/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[41] Scraping: Lots of Mud
+    URL: https://battlefordreamisland.fandom.com/wiki/Lots_of_Mud/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[42] Scraping: Insectophobe's Nightmare 4
+    URL: https://battlefordreamisland.fandom.com/wiki/Insectophobe's_Nightmare_4/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Well, Look Who It Is!
+
+[44] Scraping: PointyPointyPointy ♫
+    URL: https://battlefordreamisland.fandom.com/wiki/PointyPointyPointy_%E2%99%AB/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[45] Scraping: Spore Day
+    URL: https://battlefordreamisland.fandom.com/wiki/Spore_Day/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Respect to the Wicked
+    SKIP (already scraped): Start the Shift
+    SKIP (already scraped): Airplanes in the Night Sky
+    SKIP (already scraped): 🥚
+    SKIP (already scraped): Launch Party
+
+[51] Scraping: We're Not Friends
+    URL: https://battlefordreamisland.fandom.com/wiki/We're_Not_Friends/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[52] Scraping: I'm the Main Character
+    URL: https://battlefordreamisland.fandom.com/wiki/I'm_the_Main_Character/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[53] Scraping: Shattered!
+    URL: https://battlefordreamisland.fandom.com/wiki/Shattered!/Transcript
+    WARNING: No valid dialogue found!
+
+[54] Scraping: Welcome Back
+    URL: https://battlefordreamisland.fandom.com/wiki/Welcome_Back/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Getting Teardrop to Talk
+    SKIP (already scraped): Lick Your Way to Freedom
+
+[57] Scraping: Why Would You Do This on a Swingset
+    URL: https://battlefordreamisland.fandom.com/wiki/Why_Would_You_Do_This_on_a_Swingset/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[58] Scraping: Today's Very Special Episode
+    URL: https://battlefordreamisland.fandom.com/wiki/Today's_Very_Special_Episode/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[59] Scraping: Fortunate Ben
+    URL: https://battlefordreamisland.fandom.com/wiki/Fortunate_Ben/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Four Goes Too Far
+
+[61] Scraping: The Liar Ball You Don't Want
+    URL: https://battlefordreamisland.fandom.com/wiki/The_Liar_Ball_You_Don't_Want/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Questions Answered
+
+[63] Scraping: This Episode Is About Basketball
+    URL: https://battlefordreamisland.fandom.com/wiki/This_Episode_Is_About_Basketball/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[64] Scraping: Enter the Exit
+    URL: https://battlefordreamisland.fandom.com/wiki/Enter_the_Exit/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[65] Scraping: Get to the Top in 500 Steps
+    URL: https://battlefordreamisland.fandom.com/wiki/Get_to_the_Top_in_500_Steps/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[66] Scraping: What Do You Think of Roleplay?
+    URL: https://battlefordreamisland.fandom.com/wiki/What_Do_You_Think_of_Roleplay%3F/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Return of the Rocket Ship
+
+[68] Scraping: Don't Dig Straight Down
+    URL: https://battlefordreamisland.fandom.com/wiki/Don't_Dig_Straight_Down/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): The Four is Lava
+
+[70] Scraping: The Escape from Four
+    URL: https://battlefordreamisland.fandom.com/wiki/The_Escape_from_Four/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[71] Scraping: X Marks the Spot
+    URL: https://battlefordreamisland.fandom.com/wiki/X_Marks_the_Spot/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Take the Tower
+    SKIP (already scraped): How Loe Can You Grow?
+
+[74] Scraping: A Taste of Space
+    URL: https://battlefordreamisland.fandom.com/wiki/A_Taste_of_Space/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[75] Scraping: Let's Raid The Warehouse
+    URL: https://battlefordreamisland.fandom.com/wiki/Let's_Raid_The_Warehouse/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[76] Scraping: Who Stole Donut's Diary?
+    URL: https://battlefordreamisland.fandom.com/wiki/Who_Stole_Donut's_Diary%3F/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Fashion For Your Face!
+    SKIP (already scraped): The Game Has Changed
+    SKIP (already scraped): The Tweested Temple
+    SKIP (already scraped): The Hidden Contestant
+
+[81] Scraping: Uprooting Everything
+    URL: https://battlefordreamisland.fandom.com/wiki/Uprooting_Everything/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[82] Scraping: B.F.B. = Back From Beginning
+    URL: https://battlefordreamisland.fandom.com/wiki/B.F.B._%3D_Back_From_Beginning/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[83] Scraping: SOS (Save Our Show)
+    URL: https://battlefordreamisland.fandom.com/wiki/SOS_(Save_Our_Show)/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Chapter Complete
+
+[80] Scraping: You Know Those Buttons Don't Do Anything, Right?
+    URL: https://battlefordreamisland.fandom.com/wiki/You_Know_Those_Buttons_Don't_Do_Anything,_Right%3F/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[81] Scraping: The Worst Day of Black Hole's Life
+    URL: https://battlefordreamisland.fandom.com/wiki/The_Worst_Day_of_Black_Hole's_Life/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Getting Puffball To Think About Rollercoasters
+
+[83] Scraping: Gardening Zero
+    URL: https://battlefordreamisland.fandom.com/wiki/Gardening_Zero/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[84] Scraping: Fishes and Dishes
+    URL: https://battlefordreamisland.fandom.com/wiki/Fishes_and_Dishes/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): The Great Goikian Bake-Off
+    SKIP (already scraped): The Seven Wonders of Goiky
+    SKIP (already scraped): Balancing P.A.C.T.
+
+[88] Scraping: Outbreak At Stake
+    URL: https://battlefordreamisland.fandom.com/wiki/Outbreak_At_Stake/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[89] Scraping: Oneirophobe's Nightmare
+    URL: https://battlefordreamisland.fandom.com/wiki/Oneirophobe's_Nightmare/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[90] Scraping: Out Of The Blue
+    URL: https://battlefordreamisland.fandom.com/wiki/Out_Of_The_Blue/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[91] Scraping: What's Up Bell's String?
+    URL: https://battlefordreamisland.fandom.com/wiki/What's_Up_Bell's_String%3F/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[92] Scraping: Category One
+    URL: https://battlefordreamisland.fandom.com/wiki/Category_One/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[93] Scraping: I SAID CAREFUL!!
+    URL: https://battlefordreamisland.fandom.com/wiki/I_SAID_CAREFUL!!/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Seasonal Shift
+
+[95] Scraping: The Power Of Four
+    URL: https://battlefordreamisland.fandom.com/wiki/The_Power_Of_Four/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+    SKIP (already scraped): Bottle For Dream Island
+
+[97] Scraping: BFB 31
+    URL: https://battlefordreamisland.fandom.com/wiki/BFB_31/Transcript
+    Used action=render fallback (len=3101)
+    Could not find content div
+    WARNING: No valid dialogue found!
+
+[98] Scraping: Last One Standing
+    URL: https://battlefordreamisland.fandom.com/wiki/Last_One_Standing/Transcript
+    WARNING: No valid dialogue found!
+
+[99] Scraping: Alone
+    URL: https://battlefordreamisland.fandom.com/wiki/Alone/Transcript
+    WARNING: No valid dialogue found!
+
+============================================================
+SUMMARY
+============================================================
+Episodes processed: 103
+Successful: 1
+Failed/No transcript: 55
+Total dialogue lines: 137
+Average lines per episode: 137.0
+
+Episodes without transcripts (55):
+  - Barriers and Pitfalls
+  - Puzzling Mysteries
+  - Insectophobe's Nightmare
+  - Don't Lose Your Marbles
+  - Vomitaco
+  - Bowling, Now with Explosions!
+  - Reveal Novum
+  - Don't Pierce My Flesh
+  - Insectophobe's Nightmare 2
+  - Insectophobe's Nightmare 3
+  ... and 45 more
+============================================================
+Log written to: C:\Users\Krasen\Desktop\BFDI-SEARCH\server\logs\scrape_20251205_174612.txt

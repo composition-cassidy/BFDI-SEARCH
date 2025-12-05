@@ -1,0 +1,121 @@
+============================================================
+BFDI Search - Database Population Script v8 (SMART PARSER)
+============================================================
+Features:
+  - Bold tag parsing for character names
+  - 80+ known characters
+  - Filters garbage/creator commentary
+  - Strict dialogue validation
+============================================================
+✓ Connected to MongoDB
+
+Preserving existing data (CLEAR_EXISTING=False)
+Will skip episodes already in DB (98 found)
+
+Scraping 103 episodes...
+
+    SKIP (already scraped): Take the Plunge: Part 1
+    SKIP (already scraped): Take the Plunge: Part 2
+    SKIP (already scraped): Barriers and Pitfalls
+    SKIP (already scraped): Are You Smarter Than a Snowball?
+    SKIP (already scraped): Sweet Tooth
+    SKIP (already scraped): Bridge Crossing
+    SKIP (already scraped): Power of Three
+    SKIP (already scraped): Puzzling Mysteries
+    SKIP (already scraped): Cycle of Life
+    SKIP (already scraped): Insectophobe's Nightmare
+    SKIP (already scraped): Crybaby!
+    SKIP (already scraped): Lofty
+    SKIP (already scraped): A Leg Up in the Race
+    SKIP (already scraped): Don't Lose Your Marbles
+    SKIP (already scraped): Half a Loaf Is Better Than None
+    SKIP (already scraped): Vomitaco
+    SKIP (already scraped): Bowling, Now with Explosions!
+    SKIP (already scraped): The Reveal
+    SKIP (already scraped): Reveal Novum
+    SKIP (already scraped): Rescission
+    SKIP (already scraped): Gardening Hero
+    SKIP (already scraped): The Glistening
+    SKIP (already scraped): Don't Pierce My Flesh
+    SKIP (already scraped): Hurtful!
+    SKIP (already scraped): Insectophobe's Nightmare 2
+    SKIP (already scraped): Return of the Hang Glider
+    SKIP (already scraped): Yeah, Who? I Wanna Know
+    SKIP (already scraped): Get Digging
+    SKIP (already scraped): Insectophobe's Nightmare 3
+    SKIP (already scraped): Zeeky Boogy Doog
+    SKIP (already scraped): Get in the Van
+    SKIP (already scraped): No More Snow!
+    SKIP (already scraped): It's a Monster
+    SKIP (already scraped): The Long-lost Yoyle City
+    SKIP (already scraped): Well Rested
+    SKIP (already scraped): Intruder Alert
+    SKIP (already scraped): Meaty
+    SKIP (already scraped): Catch These Hands
+    SKIP (already scraped): Taste the Sweetness
+    SKIP (already scraped): Lots of Mud
+    SKIP (already scraped): Insectophobe's Nightmare 4
+    SKIP (already scraped): Well, Look Who It Is!
+    SKIP (already scraped): PointyPointyPointy ♫
+    SKIP (already scraped): Spore Day
+    SKIP (already scraped): Respect to the Wicked
+    SKIP (already scraped): Start the Shift
+    SKIP (already scraped): Airplanes in the Night Sky
+    SKIP (already scraped): 🥚
+    SKIP (already scraped): Launch Party
+    SKIP (already scraped): We're Not Friends
+    SKIP (already scraped): I'm the Main Character
+
+[53] Scraping: Shattered!
+    URL: https://battlefordreamisland.fandom.com/wiki/Shattered!/Transcript
+    Using local HTML: Shattered!_Transcript _ Battle for Dream Island Wiki _ Fandom.html
+    Local HTML produced no dialogue; attempting live fetch fallback...
+    Used action=render fallback (len=3101)
+    ERROR: too many values to unpack (expected 2)
+    SKIP (already scraped): Welcome Back
+    SKIP (already scraped): Getting Teardrop to Talk
+    SKIP (already scraped): Lick Your Way to Freedom
+    SKIP (already scraped): Why Would You Do This on a Swingset
+    SKIP (already scraped): Today's Very Special Episode
+    SKIP (already scraped): Fortunate Ben
+    SKIP (already scraped): Four Goes Too Far
+    SKIP (already scraped): The Liar Ball You Don't Want
+    SKIP (already scraped): Questions Answered
+    SKIP (already scraped): This Episode Is About Basketball
+    SKIP (already scraped): Enter the Exit
+    SKIP (already scraped): Get to the Top in 500 Steps
+    SKIP (already scraped): What Do You Think of Roleplay?
+    SKIP (already scraped): Return of the Rocket Ship
+    SKIP (already scraped): Don't Dig Straight Down
+    SKIP (already scraped): The Four is Lava
+    SKIP (already scraped): The Escape from Four
+    SKIP (already scraped): X Marks the Spot
+    SKIP (already scraped): Take the Tower
+    SKIP (already scraped): How Loe Can You Grow?
+    SKIP (already scraped): A Taste of Space
+    SKIP (already scraped): Let's Raid The Warehouse
+    SKIP (already scraped): Who Stole Donut's Diary?
+    SKIP (already scraped): Fashion For Your Face!
+    SKIP (already scraped): The Game Has Changed
+    SKIP (already scraped): The Tweested Temple
+    SKIP (already scraped): The Hidden Contestant
+    SKIP (already scraped): Uprooting Everything
+    SKIP (already scraped): B.F.B. = Back From Beginning
+    SKIP (already scraped): SOS (Save Our Show)
+    SKIP (already scraped): Chapter Complete
+    SKIP (already scraped): You Know Those Buttons Don't Do Anything, Right?
+    SKIP (already scraped): The Worst Day of Black Hole's Life
+    SKIP (already scraped): Getting Puffball To Think About Rollercoasters
+    SKIP (already scraped): Gardening Zero
+    SKIP (already scraped): Fishes and Dishes
+    SKIP (already scraped): The Great Goikian Bake-Off
+    SKIP (already scraped): The Seven Wonders of Goiky
+    SKIP (already scraped): Balancing P.A.C.T.
+    SKIP (already scraped): Outbreak At Stake
+    SKIP (already scraped): Oneirophobe's Nightmare
+    SKIP (already scraped): Out Of The Blue
+    SKIP (already scraped): What's Up Bell's String?
+    SKIP (already scraped): Category One
+
+[93] Scraping: I SAID CAREFUL!!
+    URL: https://battlefordreamisland.fandom.com/wiki/I_SAID_CAREFUL!!/Transcript
