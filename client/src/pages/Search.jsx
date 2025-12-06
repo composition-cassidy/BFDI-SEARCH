@@ -69,7 +69,8 @@ function Search() {
 
   const [keywords, setKeywords] = useState('');
   const [character, setCharacter] = useState('');
-  const [season, setSeason] = useState('');
+  const [selectedSeasons, setSelectedSeasons] = useState([]);
+  const [exactMatch, setExactMatch] = useState(false);
   const [match, setMatch] = useState('');
   const [results, setResults] = useState([]);
   const [dialogue, setDialogue] = useState([]);
@@ -159,15 +160,24 @@ function Search() {
 
   const getResults = () => {
     setLoad(true);
+    const keywordTerm = keywords.trim();
+    const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     const filtered = dialogue.filter((d) => {
-      if (season && String(d.season) !== String(season)) return false;
+      if (selectedSeasons.length > 0 && !selectedSeasons.includes(String(d.season))) return false;
       if (character) {
         const hay = (d.character || '').toLowerCase();
         if (!hay.includes(character.toLowerCase())) return false;
       }
-      if (keywords) {
-        const hay = (d.dialogue || '').toLowerCase();
-        if (!hay.includes(keywords.toLowerCase())) return false;
+      if (keywordTerm) {
+        const hayRaw = d.dialogue || '';
+        // Ignore parenthetical stage directions when matching.
+        const hay = hayRaw.replace(/\([^)]*\)/g, '');
+        if (exactMatch) {
+          const pattern = new RegExp(`\\b${escapeRegex(keywordTerm)}\\b`, 'i');
+          if (!pattern.test(hay)) return false;
+        } else {
+          if (!hay.toLowerCase().includes(keywordTerm.toLowerCase())) return false;
+        }
       }
       return true;
     });
@@ -226,6 +236,13 @@ function Search() {
                   /*value={title}*/
                   onChange={(e) => setKeywords(e.target.value.toLowerCase())}
                 />
+                <Form.Check
+                  className="mt-2"
+                  type="checkbox"
+                  label="Exact word/phrase match"
+                  checked={exactMatch}
+                  onChange={(e) => setExactMatch(e.target.checked)}
+                />
               </Form.Group>
               <Form.Group>
                 <Form.Label>Character</Form.Label>
@@ -243,16 +260,22 @@ function Search() {
               <br />
               <Form.Group>
                 <Form.Label>Season</Form.Label>
-                <Form.Control
-                  as="select"
-                  /*value={title}*/
-                  onChange={(e) => setSeason(e.target.value)}
-                >
-                  <option value="">All</option>
-                  {seasons.map((season) => (
-                    <option key={season.id} value={season.id}>{season.name}</option>
-                  ))}
-                </Form.Control>
+                {seasons.map((season) => (
+                  <Form.Check
+                    key={season.id}
+                    type="checkbox"
+                    label={season.name}
+                    checked={selectedSeasons.includes(String(season.id))}
+                    onChange={(e) => {
+                      const value = String(season.id);
+                      setSelectedSeasons((prev) =>
+                        e.target.checked
+                          ? [...prev, value]
+                          : prev.filter((s) => s !== value)
+                      );
+                    }}
+                  />
+                ))}
               </Form.Group>
               <br />
               <Button variant="primary" type="button" onClick={handleSubmit} disabled={load}> 
